@@ -10,18 +10,27 @@
         width:100%;
         object-fit: cover;
         height: 320px;
+        margin-bottom:16px;
       }
     </style>
-    <title G-Careers></title>
+    <title Jovian Careers></title>
+  </head>
     
     <body>
+      {% include 'nav.html' %}
+      <img class='img-fluid mt-2 mb-4' id="banner" src= "https://4adb3d26-b159-4fac-a35d-287d34dab5d5-00-hrluh2fv0dwy.sisko.replit.dev/static/banner.jpg">
       <div class='container'>
-        <h1 class='text-center'>Careers</h1>
-        <img class='img-fluid mt-2 mb-4' id="banner" src= "https://4adb3d26-b159-4fac-a35d-287d34dab5d5-00-hrluh2fv0dwy.sisko.replit.dev/static/banner.jpg">
-        <h2 class='text-center mt-2 mb-4'>About G-Careers</h2>
-        <p class='lead'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <h1 class='text-center'>Jovian Careers</h1>
+        <div class='row' style='bottom:16px;'>
+          <div class='col-md-6'>
+        <p class='lead'><b>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b>
         </p>
+          </div>
+          <div class='d-none d-md-block col-6'> 
+          <img src='/static/people.jpg' style='height:320px;border-radius:4px; margin-bottom:16px;'>
+          </div>
+        </div>
         <h2 class='text-center mt-2 mb-4'>Open Positions</h2>
         <p >
           {% for job in jobs %}
@@ -30,10 +39,9 @@
           {% endfor %}
         </p>
         <div class='text-center' >
-        <button class='btn btn-primary bt-lg'> Contact Us </button>
-          <p class='mt-4'>Copyright 2024 Girish</p>
+        <a href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openings&body=My%20Name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20Question%3A%20%3Center%20your%20question%20here%3E" class='btn btn-primary bt-lg'> Contact Us </a>
         </div>
       </div>
+      {% include 'footer.html'%}
     </body>
-  </head>
 </html>
